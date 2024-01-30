@@ -6,26 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Rubik+Burned&display=swap" rel="stylesheet">
     <title>Joken Pô</title>
 </head>
 
 <body>
-    <div class="container">
 
-        <h1>JokenPô</h1>
-        <div class="buttons">
+    <header>
 
-            <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
-            <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
-            <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
+        <div class="h1">
+            <h1>DragonPô</h1>
+        </div>
+
+    </header>
+    <main>
+
+        <div><img class="emoji-alexa" src="img/buu- comercial.png" width="280px" alt=""></div>
+
+        <div class="container">
+
+
+            <div class="buttons">
+
+                <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+                <button id="paper" onclick="playHuman('paper')">&#x1f590;</button>
+                <button id="scissors" onclick="playHuman('scissors')">&#x270c;</button>
+
+            </div>
+            <p class="result"></p>
+
+            <p>Sua Pontuação: <span id="minha-pont">0</span></p>
+            <p>Pontuação do Buu: <span id="pont-alexa">0</span></p>
 
         </div>
-        <p class="result"></p>
-        
-        <p>Sua Pontuação: <span id="minha-pont">0</span></p>
-        <p>Pontuação da Alexa: <span id="pont-alexa">0</span></p>
 
-    </div>
+        <div><img class="emoji-human" src="img/Satan-comemorando.png" width="320px" alt=""></div>
+    </main>
 
 </body>
 
