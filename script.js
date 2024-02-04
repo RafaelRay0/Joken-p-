@@ -3,23 +3,20 @@ humanScoreNumber -> Camel Case
 TUDO_JUNTO       -> Snake Case
 */
 
-
 let scoreAlexa = 0
 let scoreVocê = 0
-
+let scoreEmpate = 0
 
 const TUDO_JUNTO = {/* ENUM -> Facilita muito */
 
   ROCK: "rock",
   PAPER: "paper",
   SCISSORS: "scissors"
-
 } //Fim DO ENUM
 
 const playHuman = (valorhuman) => {
 
   playtheGame(valorhuman, playMachine())
-
 }
 
 const playMachine = () => {
@@ -29,22 +26,21 @@ const playMachine = () => {
   const random = Math.floor(Math.random() * 3)
 
   return (`${valores[random]}`)
-
 }
 
 function playtheGame(humano, maquina) {
 
   const valueHuman = document.querySelector("#minha-pont")
   const valueAlexa = document.querySelector("#pont-alexa")
-  const p = document.querySelector(".result")
+  const valueEmpate = document.querySelector("#empate")
   const emojiHuman = document.querySelector(".emoji-human")
   const emojiBuu = document.querySelector(".emoji-alexa")
   
   console.log(`Você botou: ${humano} Maquina botou: ${maquina}`)
 
   if (humano === maquina) {
-
-    p.innerHTML = "Empate"
+    scoreEmpate++
+    valueEmpate.innerHTML = scoreEmpate
     emojiBuu.src= "img/Buu-empate.png"
     emojiHuman.src= "img/Satan-assustado.png"
 
@@ -65,5 +61,4 @@ function playtheGame(humano, maquina) {
     p.innerHTML = "Buu ganhou!"
 
   }
-
 }
